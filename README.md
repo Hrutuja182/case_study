@@ -15,6 +15,14 @@
 
    Install the required backend packages:
     # pip install uvicorn pandas python-multipart
+           or 
+    # pip install fastapi uvicorn pandas python-multipart
+
+     not rendering main.py so added manually
+    # notepad main.py
+    
+    Go back to your backend terminal after frontend setup(ensure the virtual environment is active) and start the Python API:
+   # uvicorn main:app --reload
 
 3.for frontend 
   Open a new terminal panel in VS Code, navigate back to the root case_study folder, and create the frontend:
@@ -28,9 +36,14 @@
 
   Open the provided local link (typically http://localhost:5173/) in your browser to verify the frontend server is running.
 
-  Go back to your backend terminal (ensure the virtual environment is active) and start the Python API:
-   uvicorn main:app --reload
 
   Update frontend/src/App.tsx with your custom code to handle file uploading, API communication, and KPI rendering.
 
 Test your application by uploading the provided CSV file and checking if the UI correctly displays the performance metrics. A simple, clean UI is perfectly acceptable.
+
+
+4. git
+pushed changes to branch
+# git add .
+# git commit -m "dashboard changes"
+# git push
