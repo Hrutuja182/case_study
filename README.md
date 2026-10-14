@@ -46,4 +46,4 @@ Test your application by uploading the provided CSV file and checking if the UI 
 pushed changes to branch
 # git add .
 # git commit -m "dashboard changes"
-# git push
+# git push --set-upstream origin "R&D-dashboard"
