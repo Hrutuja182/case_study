@@ -24,7 +24,7 @@ const cards:card[] = [
 ];
 
 const styles={
-  page:{background:'#e0f2fe', minHeight:'100vh',color: '#1e293b',fontFamily:'sans-serif'},
+  page:{position:'fixed', inset:0, overflowY:'auto', background:'#e0f2fe', padding:'0 16px', boxSizing:'border-box', textAlign:'center', color:'#1e293b', fontFamily:'sans-serif'},
   container:{ maxWidth:880,margin:'0 auto',},
   uploadBox:{ background:'#fff', borderRadius:16, padding:'25px 0px 25px 0px', margin: 24, display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center', boxShadow: '0 4px 16px rgba(0,0,0,.1)',alignContent:'center', justifyContent:'center'},
   input:{padding:10, border:'2px dashed #6366f1', borderRadius:8},
