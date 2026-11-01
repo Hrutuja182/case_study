@@ -98,7 +98,7 @@ function App() {
         )}
       </div>
       {error && (
-        <p role='alert'style={styles.error}>
+        <p role='alert' style={styles.error}>
           Error:{error}</p>
       )}
       {kpi && (
