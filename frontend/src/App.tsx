@@ -26,7 +26,7 @@ const cards:card[] = [
 const styles={
   page:{position:'fixed', inset:0, overflowY:'auto', background:'#e0f2fe', padding:'0 16px', boxSizing:'border-box', textAlign:'center', color:'#1e293b', fontFamily:'sans-serif'},
   container:{ maxWidth:880,margin:'0 auto',},
-  uploadBox:{ background:'#fff', borderRadius:16, padding:'25px 0px 25px 0px', margin: 24, display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center', boxShadow: '0 4px 16px rgba(0,0,0,.1)',alignContent:'center', justifyContent:'center'},
+  uploadBox:{ background:'#fff', borderRadius:16, padding:25, marginTop:24, display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center', boxShadow: '0 4px 16px rgba(0,0,0,.1)',alignContent:'center', justifyContent:'center'},
   input:{padding:10, border:'2px dashed #6366f1', borderRadius:8},
   hint:{ width: '100%', textAlign: 'center', margin: 0, fontSize: 14, color: '#475569' },
   error:{ marginTop: 16, padding: '12px 16px', background: '#fee2e2', color: '#7f1d1d', borderRadius: 8 },
@@ -86,7 +86,7 @@ function App() {
         </label>
         <input id='csv-file' type='file' accept='.csv' onChange={onSelect} style={styles.input}/>
         <button disabled={disablebutton} 
-        style={{ display:'flex',cursor: disablebutton ? 'default' :'pointer',minHeight:44, padding:'0 28px', borderRadius:8,background: disablebutton ? '#ccc':'#6366f1', color:'#fff',alignItems:'center'}} 
+        style={{ display:'flex',cursor: disablebutton ? 'default' :'pointer',minHeight:44, padding:'0 28px', borderRadius:8,background: disablebutton ? '#ccc':'#6366f1', color:'#fff',alignItems:'center', border:0}} 
         onClick={analyze}
          aria-describedby={file ? undefined : 'upload-hint'}>
           {loading ? 'Analyzing...' : 'Analyze'}
@@ -98,7 +98,7 @@ function App() {
         )}
       </div>
       {error && (
-        <p style={styles.error}>
+        <p role='alert'style={styles.error}>
           Error:{error}</p>
       )}
       {kpi && (
