@@ -86,7 +86,7 @@ function App() {
         </label>
         <input id='csv-file' type='file' accept='.csv' onChange={onSelect} style={styles.input}/>
         <button disabled={disablebutton} 
-        style={{ display:'flex',cursor: disablebutton ? 'default' :'pointer',minHeight:44, padding:'0 28px', borderRadius:8,background: disablebutton ? '#ccc':'#6366f1', color:'#fff',alignItems:'center', border:0}} 
+        style={{ display:'flex',cursor: disablebutton ? 'not-allowed' :'pointer',minHeight:44, padding:'0 28px', borderRadius:8,background: disablebutton ? '#ccc':'#6366f1', color:'#fff',alignItems:'center', border:0}} 
         onClick={analyze}
          aria-describedby={file ? undefined : 'upload-hint'}>
           {loading ? 'Analyzing...' : 'Analyze'}
