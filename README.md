@@ -68,6 +68,7 @@ Instance type: Free
  to app.tsx file.
  2. then created file
        .env.production
+          add -->VITE_API_URL=https://case-study-1-mskf.onrender.com (backend URL)
  3. open console.firebase.google.com and click Add project. Create a new project
  4. in powershell:
     # npm install -g firebase-tools
