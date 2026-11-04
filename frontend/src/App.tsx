@@ -7,7 +7,8 @@ interface kpi{
     avg_duration_min: number;
 }
 
-const API_URL = 'http://localhost:8000/analyze';
+//const API_URL = 'http://localhost:8000/analyze';
+const API_URL = `${import.meta.env.VITE_API_URL ?? 'http://localhost:8000'}/analyze`;
 
 interface card{          
   key: keyof kpi;
