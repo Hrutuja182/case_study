@@ -8,7 +8,7 @@ app = FastAPI()
 # Enable CORS for local TypeScript frontend interaction
 app.add_middleware(
    CORSMiddleware,
-   allow_origins=["*"],
+   allow_origins=["https://<project>.web.app", "https://<project>.firebaseapp.com"],
    allow_credentials=True,
    allow_methods=["*"],
    allow_headers=["*"],
