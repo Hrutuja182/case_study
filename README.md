@@ -47,3 +47,35 @@ pushed changes to branch
 # git add .
 # git commit -m "dashboard changes"
 # git push --set-upstream origin "R&D-dashboard"
+
+5.build in backend
+ 1. added requirements.txt file
+   fastapi
+   uvicorn
+   pandas
+   python-multipart
+
+ 2. then commit chnages and push to github branch
+ 3. open render.com and sign up with github. New --> webservice, picked my repo and deploy 
+ 4. Fill in:
+Root Directory: backend
+Build Command: pip install -r requirements.txt
+Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+Instance type: Free
+
+6.frontend Build:
+ 1. added    const API_URL = `${import.meta.env.VITE_API_URL ?? 'http://localhost:8000'}/analyze`;
+ to app.tsx file.
+ 2. then created file
+       .env.production
+ 3. open console.firebase.google.com and click Add project. Create a new project
+ 4. in powershell:
+    # npm install -g firebase-tools
+   # firebase login
+   # cd frontend
+   # firebase init hosting
+
+5. # npm run build
+   # firebase deploy --only hosting
+
+6. wee need add allow_origins=["https://case-study-f0f12.web.app", "https://case-study-f0f12.firebaseapp.com"]
